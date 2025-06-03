@@ -13,7 +13,8 @@ describe("voating", () => {
 
   let context;
   let provider;
-  let voatingProgram;
+  anchor.setProvider(provider);
+  let voatingProgram = anchor.workspace.Voating as Program<Voating>;
 
   before(async() => {
     //use anchor-bankrun to start the anchor provider
